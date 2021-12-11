@@ -577,7 +577,18 @@ body {
     right: 240px;
   }
   
-  
+  .footer {
+    width: 100%;
+    max-width: 1080px;
+    height: 20%;
+    padding-top: 20px;
+
+    background-color: #000;
+    color: white;
+    
+    text-align: center;
+
+  }
   
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
       .container {
