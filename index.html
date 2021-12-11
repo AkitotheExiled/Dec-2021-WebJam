@@ -1,0 +1,686 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+      <div class="navbar">
+        <ul class="menuElements">
+          <li class="menu" aria-haspopup="true" id="menu">
+            <button class="dropbtn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html">Menu</a>
+              <a href="#" onclick="show('pizza');">Pizza</a>
+              <a href="#" onclick="show('bread');">Bread</a>
+              <a href="#" onclick="show('pizza');">Dessert</a>
+            </div>
+          </li>
+          <li class="shoppingCart" id="shopping" aria-haspopup="true">
+            <div class="iconButton">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="button_badge">0</span>
+            </div>
+            <div class="shoppingbag" id="bagtoShow">
+              <div class="foodList" id="fItems">
+              </div>
+              <div class="checkoutSpace">
+                <button class="primary" onclick="show('checkout'); updateTotal();">Checkout</button>
+              </div>
+            </div>
+          </li>
+      </ul></div>
+      <div class="nav">
+        <div class="container" id ="cont">
+          <div class="orderBox">
+            <button class="orderHead" onclick="show('pizza');">Pizza</button>
+          </div>
+           <div class="orderBox">
+            <button class="orderHead" onclick="show('bread');">Bread</button>
+          </div>
+           <div class="orderBox">
+            <button class="orderHead" onclick="show('dessert');">Dessert</button>
+          </div>
+        </div>
+      </div>
+      <div class="main" id="pizza">
+        <div class="catName">Pizza</div>
+    <div class="cardBox">
+        <div class="productImg">
+          <img src="images/pepperoniPizza.jpg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $7.75
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           230 Cal/Slice - 8 Slices
+           </p>
+          <p class="productName">
+            Pepperoni Pizza
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Pepperoni, Cheese, Wheat, Flour, Water, Tomato Sauce Mix
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/sasuagePiz.jpg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $9.95
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           320 Cal/Slice - 8 Slices
+           </p>
+          <p class="productName">
+            Sasuage Pizza
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Sasuages, Cheese, Tomato Sauce Mix, Wheat, Flour, Water
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/basil_pineapplePiz.jpg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $8.75
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           275 Cal/Slice - 8 Slices
+           </p>
+          <p class="productName">
+            Ham Basil Pizza
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Ham, Cheese, Tomato Sauce Mix, Basil, Pineapple
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/oliveCheesePiz.jpg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $6.75
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           375 Cal/Slice - 8 Slices
+           </p>
+          <p class="productName">
+            Olive & Cheese Pizza
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Olives, Tomato Sauce Mix, Flour, Wheat, Water, Cheese
+            </p>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div class="main" id="bread" style="display: none;">
+        <div class="catName">Bread</div>
+    <div class="cardBox">
+        <div class="productImg">
+          <img src="images/twistedLoaf.jpeg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $10.00
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           700 Cal/Loaf 
+           </p>
+          <p class="productName">
+            Knot Bread
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Flour, Wheat, Water
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/breadsticks1.jpeg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $3.50
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           50 Cal/Stick 4 Sticks
+           </p>
+          <p class="productName">
+            Knot Sticks
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Flour, Wheat, Water
+            </p>
+          </a>
+        </div>
+      </div>
+      
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/twistedBreadStick3.jpeg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $17.75
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           170 Cal/Stick - 2 Sticks
+           </p>
+          <p class="productName">
+            Twisted Bread Stick
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Flour, Wheat, Salt, Pepper
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="productImg">
+          <img src="images/breadsticks4.jpeg">
+        </div>
+        <div class="orderContainer">
+          <select name="amount" class="selectQty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <button class="orderButton" onclick="addItemToBag(this);">
+            <p class="itemCost">
+              $27.75
+            </p>
+          <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+          </button>
+          
+        </div>
+        <div class="productInfo">
+          <p class="productTag">
+           230 Cal/Slice - 10 Slices
+           </p>
+          <p class="productName">
+           Knot Bread Slices
+          </p>
+          <a href="#">
+            <p class="productDetails">
+              Flour, Salt, Wheat
+            </p>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div class="main" id="dessert" style="display: none;">
+        <div class="catName">Dessert</div>
+        <div class="cardBox">
+          <div class="productImg">
+            <img src="images/chocBrownie.jpeg">
+          </div>
+          <div class="orderContainer">
+            <select name="amount" class="selectQty">
+              <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+  
+            <button class="orderButton" onclick="addItemToBag(this);">
+              <p class="itemCost">
+                $8.95
+              </p>
+            <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+            </button>
+            
+          </div>
+          <div class="productInfo">
+            <p class="productTag">
+             500 Cal/Slice - 1 Slice
+             </p>
+            <p class="productName">
+              Chocolate Brownie Chunk
+            </p>
+            <a href="#">
+              <p class="productDetails">
+                Chocolate Cake Mixture, Sugar, Raspberries, Blueberries
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="cardBox">
+          <div class="productImg">
+            <img src="images/chocolateCake.jpeg">
+          </div>
+          <div class="orderContainer">
+            <select name="amount" class="selectQty">
+              <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+  
+            <button class="orderButton" onclick="addItemToBag(this);">
+              <p class="itemCost">
+                $50.00
+              </p>
+            <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+            </button>
+            
+          </div>
+          <div class="productInfo">
+            <p class="productTag">
+             500 Cal/Slice - 8 Slices
+             </p>
+            <p class="productName">
+              Chocolate Chunk Cake
+            </p>
+            <a href="#">
+              <p class="productDetails">
+                Chocolate Cake Mixture, Sugar, Raspberries, Blueberries
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="cardBox">
+          <div class="productImg">
+            <img src="images/chocolatechipCookie.jpeg">
+          </div>
+          <div class="orderContainer">
+            <select name="amount" class="selectQty">
+              <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+  
+            <button class="orderButton" onclick="addItemToBag(this);">
+              <p class="itemCost">
+                $9.95
+              </p>
+            <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+            </button>
+            
+          </div>
+          <div class="productInfo">
+            <p class="productTag">
+             250 Cal/Cookie - 4 Cookies
+             </p>
+            <p class="productName">
+              Chocolate Chip Cookies
+            </p>
+            <a href="#">
+              <p class="productDetails">
+                Sugar, Brown Sugar, Vegetable Oil, 2% Milk, Vanila Extract, Milk chocolate, Flour
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="cardBox">
+          <div class="productImg">
+            <img src="images/VeganCookiesjpeg.jpeg">
+          </div>
+          <div class="orderContainer">
+            <select name="amount" class="selectQty">
+              <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+  
+            <button class="orderButton" onclick="addItemToBag(this);">
+              <p class="itemCost">
+                $12.00
+              </p>
+            <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+            </button>
+            
+          </div>
+          <div class="productInfo">
+            <p class="productTag">
+             230 Cal/Slice - 4 Cookies
+             </p>
+            <p class="productName">
+              Vegan Cookie
+            </p>
+            <a href="#">
+              <p class="productDetails">
+                Sugar, Brown Sugar, Coconut Oil, Non-dairy milk, Vanila Extract, Vegan Chocolate, Flour
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="cardBox">
+          <div class="productImg">
+            <img src="images/raspberryCupcake.jpeg">
+          </div>
+          <div class="orderContainer">
+            <select name="amount" class="selectQty">
+              <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+  
+            <button class="orderButton" onclick="addItemToBag(this);">
+              <p class="itemCost">
+                $9.99
+              </p>
+            <svg class ='smallIcons' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+            </button>
+            
+          </div>
+          <div class="productInfo">
+            <p class="productTag">
+             300 Cal/CupCake - 5 CupCakes
+             </p>
+            <p class="productName">
+              Raspberry Cupcake
+            </p>
+            <a href="#">
+              <p class="productDetails">
+                Raspberry, white cake mix
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main" id="checkout" style="display: none;">
+        
+<div class="checkoutPage">
+  <div class="orderSelection">
+    <p class="orderConfirm">Confirm your selections</p>
+    <div class="orders" id="orderList">
+    </div>
+    <div class="linebreak"></div>
+    <div class="orderFooter">
+      <div class="orderText">Total:</div>
+      <div class="orderTotal">
+        0
+      </div>
+      
+    </div>
+    <div class="promoContainer">
+      <input type="code" class="regularInput" placeholder="promo code"></input>
+    <button class="primary">Enter</button>
+    </div>
+  </div>
+  <div class="infoSelection">
+    <div class="categoryInfo">
+      <div class="categoryHead">Your Basic Information</div>
+      <div class="inlineInputs">
+        <div class="inputHolder">
+          <div class="descriptor">First Name</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="Jane"></input></div>
+        </div>
+        <div class="inputHolder">
+          <div class="descriptor">Last Name</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="Jane"></input></div>
+        </div>
+      </div>
+       <div class="inlineInputs">
+        <div class="inputHolder">
+          <div class="descriptor">Street Address</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="123 Example St" id="address"></input></div>
+        </div>
+        <div class="inputHolder">
+          <div class="descriptor">State</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="HI" id="state"></input></div>
+        </div>
+        <div class="inputHolder">
+          <div class="descriptor">City</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="Wuitcha" id="city"></input></div>
+        </div>
+      </div>
+      <div class="inlineInputs">
+        <div class="inputHolder">
+          <div class="descriptor">Email Address</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="janedoe@example.com"></input></div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="linebreak" style="width: 475px;"></div>
+    <div class="categoryInfo">
+       <div class="categoryHead">Your Payment Information</div>
+      <div class="inlineInputs">
+        <div class="inputHolder" id="ccNumDiv">
+          <div class="descriptor">Credit Card</div>
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="Card Number" id="ccnumber"></input></div>
+        </div>
+        <div class="inputHolder" id="ccMMDiv">
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="MM/YY" id="ccmonthyear"></input></div>
+        </div>
+        <div class="inputHolder" id="ccCVCDiv">
+          <div class="inputSelf"><input type="text" class="regularInput" placeholder="CVC" id="cccvc"></input></div>
+        </div>
+      </div>
+    </div>
+    <div class="buttonHolder">
+    <button class="secondary">Cancel</button>
+    <button class="primary" onclick="placeOrder();">Place Order</button>
+    </div>
+  </div>
+  
+  </div>
+        </div>
+      <script src="script.js"></script>
+</html>
