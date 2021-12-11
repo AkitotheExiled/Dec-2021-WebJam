@@ -53,6 +53,7 @@ body {
 .iconButton {
     display: inline-block;
     margin: 6px;
+    position: relative;
 }
 
 .iconButton svg {
@@ -70,7 +71,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     position:absolute;
-    top:10px;
+    top:0;
     right:0;
 }
 
